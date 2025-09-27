@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph untuk WhatsApp, Facebook, Telegram -->
+    <meta property="og:title" content="Undangan Pernikahan Romeo & Juliet">
+    <meta property="og:description" content="Dengan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami. Klik untuk melihat undangan.">
+    <meta property="og:image" content="https://fdgallery.id/assets/img/cover.jpg">
+    <meta property="og:url" content="https://fdgallery.id/undangan/romeo-juliet/?to=Tulis+nama+tamu">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (opsional, untuk X/Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Undangan Pernikahan Romeo & Juliet">
+    <meta name="twitter:description" content="Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir di acara pernikahan kami.">
+    <meta name="twitter:image" content="https://fdgallery.id/assets/img/cover.jpg">
+    
+    <title>The Wedding of Romeo & Juliet</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-logo.png">
+    <link rel="apple-touch-icon" href="./assets/img/favicon-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="cover-page" id="coverPage">
+        <div class="cover-content text-center">
+            <img src="assets/img/cover.webp" alt="Wedding Cover" class="cover-image">
+            <h4>The Wedding Of</h4>
+            <h1 class="font-sacramento">Romeo & Juliet</h1>
+            <p class="mt-4">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <h3 class="guest-name" id="guestName">Tamu Undangan</h3>
+            <button id="openInvitation" class="btn btn-outline-light mt-4">
+                <i class="bi bi-envelope-open-heart"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <main class="main-content" id="mainContent" style="display: none;">
+        <audio id="weddingMusic" loop>
+            <source src="assets/music/wedding.mp3" type="audio/mpeg">
+        </audio>
+
+        <nav class="navbar navbar-expand-lg fixed-bottom bg-dark-transparent">
+            <div class="container-fluid">
+                <ul class="navbar-nav mx-auto d-flex flex-row justify-content-around w-100">
+                    <li class="nav-item"><a class="nav-link text-white" href="#home"><i class="bi bi-house-door"></i></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#mempelai"><i class="bi bi-heart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#tanggal"><i class="bi bi-calendar-check"></i></a></li>
+                    <li class="nav-item music-toggle-container">
+                        <button id="musicToggle" class="btn btn-music"><i class="bi bi-disc"></i></button>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#galeri"><i class="bi bi-images"></i></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#rsvp"><i class="bi bi-book"></i></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#amplop"><i class="bi bi-gift"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home" class="section-home d-flex align-items-center justify-content-center text-center text-white">
+            <div class="container">
+                <div class="animate-up">
+                    <div class="photo-frame">
+                        <img src="assets/img/galery1.webp" alt="Foto Pasangan">
+                    </div>
+                    <h4>The Wedding Of</h4>
+                    <h1 class="font-sacramento display-1">Romeo & Juliet</h1>
+                    <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.</p>
+                    <h3 class="guest-name-home" id="guestNameHome">Tamu Undangan</h3>
+                </div>
+                <div id="countdown" class="countdown-container mt-4 animate-up"></div>
+            </div>
+        </section>
+
+        <section id="quran" class="section-quran py-5">
+            <div class="container">
+                <div class="quran-box animate-up">
+                    <img src="assets/img/01-1.png" alt="Ornamen Bismillah" class="ornament">
+                    <img src="assets/img/bismillah-1.svg" alt="Bismillah" class="quran-ornament">
+                    <p class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ</p>
+                    <p class="translation-text">"Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berpikir."</p>
+                    <p class="surah-text">- Q.S. Ar-Rum: [30] 21 -</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mempelai" class="section-mempelai py-5">
+            <div class="container text-center">
+                <h2 class="font-sacramento display-4 mb-5 animate-up">Pasangan Mempelai</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 mb-5 mb-md-0 animate-left">
+                        <img src="assets/img/groom.webp" alt="Groom" class="img-fluid rounded-circle profile-pic">
+                        <h3 class="font-sacramento mt-3">Romeo</h3>
+                        <p>Putra dari Bapak Montague & Ibu Montague</p>
+                        <a href="https://instagram.com" target="_blank" class="text-dark"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                    <div class="col-md-5 animate-right">
+                        <img src="assets/img/bride.webp" alt="Bride" class="img-fluid rounded-circle profile-pic">
+                        <h3 class="font-sacramento mt-3">Juliet</h3>
+                        <p>Putri dari Bapak Capulet & Ibu Capulet</p>
+                        <a href="https://instagram.com" target="_blank" class="text-dark"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tanggal" class="section-tanggal py-5 text-center">
+             <div class="container animate-zoom">
+                <h2 class="font-sacramento display-4 mb-5">Save The Date</h2>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-5">
+                        <div class="card event-card">
+                            <div class="card-body">
+                                <h3 class="card-title">Akad Nikah</h3>
+                                <p><i class="bi bi-calendar-heart"></i> Sabtu, 20 Desember 2025</p>
+                                <p><i class="bi bi-clock"></i> 08:00 - 10:00 WIB</p>
+                                <p><i class="bi bi-geo-alt"></i> Verona Cathedral, Italy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card event-card">
+                            <div class="card-body">
+                                <h3 class="card-title">Resepsi</h3>
+                                <p><i class="bi bi-calendar-heart"></i> Sabtu, 20 Desember 2025</p>
+                                <p><i class="bi bi-clock"></i> 11:00 - Selesai</p>
+                                <p><i class="bi bi-geo-alt"></i> Verona Ballroom, Italy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <a href="https://www.google.com/calendar" target="_blank" class="btn btn-outline-dark mt-4">
+                    <i class="bi bi-calendar-plus"></i> Simpan Tanggal
+                </a>
+            </div>
+        </section>
+
+        <section id="galeri" class="section-galeri py-5">
+            <div class="container text-center">
+                <h2 class="font-sacramento display-4 mb-5 animate-up">Momen Bahagia Kami</h2>
+                <p class="animate-up">Silakan klik pada gambar untuk melihat lebih besar.</p>
+                <div class="row g-3">
+                    <div class="col-md-4 col-6 animate-zoom"><img src="assets/img/galery1.webp" class="img-fluid gallery-item" alt="Gallery 1"></div>
+                    <div class="col-md-4 col-6 animate-zoom"><img src="assets/img/galery2.webp" class="img-fluid gallery-item" alt="Gallery 2"></div>
+                    <div class="col-md-4 col-6 animate-zoom"><img src="assets/img/galery3.webp" class="img-fluid gallery-item" alt="Gallery 3"></div>
+                    <div class="col-md-4 col-6 animate-zoom"><img src="assets/img/galery1.webp" class="img-fluid gallery-item" alt="Gallery 4"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body"><img id="modalImage" src="" class="img-fluid"></div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="video" class="section-video py-5 text-center">
+            <div class="container animate-up">
+                 <h2 class="font-sacramento display-4 mb-5">Our Love Story</h2>
+                <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7PIji8OubXU?si=AbuCdWBMsjLvCbwM&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="rsvp" class="section-rsvp py-5">
+            <div class="container text-center">
+                <h2 class="font-sacramento display-4 mb-4 animate-up">Konfirmasi Kehadiran</h2>
+                <p class="mb-5 animate-up">Mohon isi form di bawah ini untuk mengonfirmasi kehadiran Anda.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 animate-up">
+                        <form id="rsvpForm">
+                            <div class="mb-3"><input type="text" class="form-control" name="nama" placeholder="Nama Anda" required></div>
+                            <div class="mb-3">
+                                <select class="form-select" name="kehadiran" required>
+                                    <option value="" selected disabled>Pilih status kehadiran</option>
+                                    <option value="Hadir">Hadir</option>
+                                    <option value="Tidak Hadir">Tidak Hadir</option>
+                                </select>
+                            </div>
+                            <div class="mb-3"><textarea class="form-control" name="pesan" rows="4" placeholder="Tuliskan pesan & ucapan Anda"></textarea></div>
+                            <button type="submit" class="btn btn-primary">Kirim Konfirmasi</button>
+                        </form>
+                        <div id="rsvp-alert" class="mt-3"></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-10">
+                        <h3 class="font-sacramento display-5 mb-4">Ucapan dari Tamu</h3>
+                        <div id="rsvpList" class="rsvp-list text-start"><p>Memuat ucapan...</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="amplop" class="section-amplop py-5">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="font-sacramento display-4 mb-4 animate-up">Amplop Digital</h2>
+                    <p class="animate-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara digital.</p>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-5 animate-zoom">
+                        <div class="gift-card-v2">
+                            <div class="gift-header"><img src="assets/img/BCA.webp" alt="BCA Logo" class="gift-logo"></div>
+                            <div class="gift-body">
+                                <div class="gift-details">
+                                    <div class="gift-item"><span>Atas Nama</span><strong>Juliet</strong></div>
+                                    <div class="gift-item"><span>Pernikahan</span><strong>12/12/2025</strong></div>
+                                </div><hr>
+                                <div class="gift-account">
+                                    <div class="account-number"><span>Nomor Rekening</span><strong id="norek-bca">0123 456 789</strong></div>
+                                    <div class="account-copy"><button class="btn btn-light btn-sm" onclick="copyToClipboard('0123456789')"><i class="bi bi-copy"></i> Salin</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 animate-zoom">
+                        <div class="gift-card-v2">
+                            <div class="gift-header"><img src="assets/img/OVO-LOGO.webp" alt="OVO Logo" class="gift-logo ovo"></div>
+                            <div class="gift-body">
+                                <div class="gift-details">
+                                    <div class="gift-item"><span>Atas Nama</span><strong>Romeo</strong></div>
+                                    <div class="gift-item"><span>Pernikahan</span><strong>12/12/2025</strong></div>
+                                </div><hr>
+                                <div class="gift-account">
+                                    <div class="account-number"><span>Nomor OVO</span><strong id="norek-ovo">0123 456 789</strong></div>
+                                    <div class="account-copy"><button class="btn btn-light btn-sm" onclick="copyToClipboard('0123456789')"><i class="bi bi-copy"></i> Salin</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer class="footer py-4 text-center">
+        <p class="mb-0">&copy; 2025 Romeo & Juliet. All rights reserved.</p>
+        <p class="small">Powered by:
+            <h1 class="font-sacramento">fdgallery.id</h1>
+            <a target="_blank" href="https://www.instagram.com/fahridwis05/"><img src="assets/img/instagram-logo.png" alt="instagram"></a>
+            <a target="_blank" href="https://api.whatsapp.com/send/?phone=6281287927192"><img src="assets/img/whatsapp-logo.png" alt="whatApps"></a>
+            <a target="_blank" href="#"><img src="assets/img/favicon-logo.png" alt="Logo"></a>
+        </p>
+        
+    </footer>    
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
