@@ -1,11 +1,9 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sacramento&display=swap');
-
 /* Style Global */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body { font-family: 'Roboto', sans-serif; overflow-x: hidden; text-align: center; padding-bottom: 100px; font-size: 16px;}
 .font-sacramento { font-family: 'Sacramento', cursive; }
-
 /* Halaman Cover */
 .cover-page {
     overflow-x: hidden;
@@ -65,6 +63,29 @@ body { font-family: 'Roboto', sans-serif; overflow-x: hidden; text-align: center
 }
 .btn-music.playing .bi-disc::before { animation: spin 2s linear infinite; }
 
+.bg-theme-auto { background-color: rgba(255, 255, 255, 0.12); }
+.text-theme-auto { color: #fff !important; }
+.btn-outline-auto {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+}
+.with-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+.with-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.with-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.with-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+}
+.font-esthetic { font-family: 'Sacramento', cursive; }
+
 /* Style Section Umum */
 section { padding: 80px 0; }
 section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
@@ -109,11 +130,20 @@ section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
     position: relative; /* Penting untuk z-index */
     z-index: 1; /* Pastikan di atas konten biasa, tapi di bawah navbar */
 }
+.footer .small {
+    margin-top: 5px;
+    opacity: 0.8;
+    background-color: #1f1f1f86;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 4px solid rgba(255, 255, 255, 0.9);
+}
 
 .footer img {
     height: 24px; /* Ukuran ikon media sosial */
     width: auto;
-    margin: 0 5px; /* Jarak antar ikon */
+    margin: 0 2px; /* Jarak antar ikon */
     vertical-align: middle;
 }
 
@@ -128,6 +158,7 @@ section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
 }
 
 .footer p.small a:hover {
+
     text-decoration: underline;
 }
 
@@ -143,6 +174,7 @@ section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
 .visible.animate-right { animation: slideInRight 1.2s forwards; }
 .visible.animate-up { animation: fadeInUp 1.2s forwards; }
 .visible.animate-zoom { animation: zoomIn 1.2s forwards; }
+.visible.animate-scroll{animation: zoomIn 1.2s forwards;}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -175,7 +207,7 @@ section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
 }
 .gift-logo { max-height: 40px; width: auto; }
 .gift-logo.ovo { max-width: 100px; }
-.gift-body hr { border-color: rgba(255, 255, 255, 0.158); background-image: url('../img/Background-atm-invitren.webp'); }
+.gift-body hr { border-color: rgba(221, 212, 212, 0.028); background-image: url('../img/Background-atm-invitren.webp'); }
 .gift-details { display: flex; justify-content: space-between; text-align: left; margin-bottom: 1rem; }
 .gift-item { display: flex; flex-direction: column; }
 .gift-item span { font-size: 0.8rem; opacity: 0.8; }
@@ -203,6 +235,14 @@ section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
     border-radius: 15px;
     text-align: center;
 }
+.quran-content {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay gelap transparan */
+    backdrop-filter: blur(5px); 
+    padding: 2rem;
+    border-radius: 15px;
+}
 .quran-ornament {
     width: 151px; /* Sesuaikan ukuran ornamen */
     height: auto;
@@ -228,4 +268,64 @@ section:nth-of-type(odd) { background-color: #f8f9fa; color: #333; }
 .surah-text {
     font-weight: bold;
     font-size: 1.1rem;
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.mouse-animation>.scroll-animation {
+    width: 0.25rem;
+    height: 0.625rem;
+    animation: scroll 3s linear infinite;
+}
+
+.mouse-animation {
+    height: 2rem;
+    box-sizing: content-box;
+}
+/* ANIMASI SCROLL */
+@keyframes spin-icon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin-button {
+    animation: spin-icon 5s linear infinite;
+}
+
+@keyframes love {
+    50% {
+        transform: translateY(1rem);
+    }
+}
+
+.animate-love {
+    animation: love 5s ease-in-out infinite;
+}
+
+.slide-desktop {
+    transform: scale(1);
+    transition: transform 10s linear;
+}
+
+.slide-desktop-active {
+    transform: scale(1.15);
 }
